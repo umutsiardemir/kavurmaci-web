@@ -1,0 +1,151 @@
+/* Genel Stiller */
+.app-container {
+  background: linear-gradient(180deg, #f5f1f1, #c45f5f), url('./bg.png');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Logo Stili */
+.logo-img {
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(241, 239, 239, 0.6);
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-110%);
+  z-index: 2;
+  animation: fadeInUpLogo 1.5s ease-out forwards;
+}
+
+/* İletişim Bilgileri Merkezi Konumlandırma */
+.contact-info {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 10%;
+  left: 32%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  opacity: 0;
+  animation: fadeInUp 3s 1s forwards;
+  z-index: 2;
+}
+
+/* Logo Animasyonu */
+@keyframes fadeInUpLogo {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* İletişim Bilgileri Animasyonu */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effect */
+.contact-info:hover {
+  transform: scale(1.05);
+}
+
+/* Arka Plan Geçiş Efekti */
+.app-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  animation: backgroundTransition 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* Geçiş Efekti Animasyonu */
+@keyframes backgroundTransition {
+  0% {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  50% {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  100% {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* YAKINDA AÇILIYORUZ Yazısı */
+.opening-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Yazı stili ve arka plaka */
+.opening-text {
+  font-size: 4rem;  /* Font büyütüldü */
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  animation: textAnimate 2s ease-out forwards;
+  position: relative;
+  z-index: 2;
+  /* Arka plakanın aynı tonu kullanıldı */
+  text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.4),  /* Pembe gölge */
+               0 0 25px rgba(255, 105, 180, 0.6),  /* Pembe ışıma */
+               0 0 5px rgba(255, 105, 180, 0.2);  /* Pembe parıltı */
+  transform: perspective(500px) rotateX(15deg) rotate(-10deg); /* Yazıyı eğik yapmak için rotate kullanıldı */
+  background: rgba(0, 0, 0, 0.6); /* Yazı arkasına koyu bir zemin eklendi */
+  padding: 10px 20px; /* Plakaya biraz iç boşluk eklendi */
+  border-radius: 15px; /* Plakaya yuvarlak köşeler eklendi */
+}
+
+/* Plaka animasyonu */
+@keyframes textAnimate {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) rotateX(90deg) rotate(-20deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(0) rotateX(0deg) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg) rotate(0deg);
+  }
+}
