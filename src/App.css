@@ -1,3 +1,4 @@
+
 /* Genel Stiller */
 .app-container {
   background: linear-gradient(180deg, #f5f1f1, #c45f5f), url('./bg.png');
@@ -43,6 +44,7 @@
   opacity: 0;
   animation: fadeInUp 3s 1s forwards;
   z-index: 2;
+  width: 500px;
 }
 
 /* Logo Animasyonu */
@@ -111,6 +113,7 @@
   align-items: center;
   height: 100vh;
   position: relative;
+  width: 500vh;
 }
 
 /* Yazı stili ve arka plaka */
@@ -150,5 +153,40 @@
   }
   
 }
+@media (min-width: 200px) {
+
+  .logo-img{
+    width: 60%;
+  }
 
 
+  .opening-text{
+    font-size: 2rem;
+  }
+
+
+  .contact-info{
+    width: 300px;
+    left: 20%;
+  }
+
+}
+
+
+
+@media (min-width: 1024px) {
+
+  .logo-img{
+    width: 25%;
+  }
+
+  .opening-text{
+    font-size: 3rem;
+  }
+  
+  .contact-info{
+    width: 500px;
+    left: 32%;
+  }
+ 
+}

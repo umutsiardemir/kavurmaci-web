@@ -3,7 +3,9 @@ import { motion } from 'framer-motion';
 import './App.css';
 import logo from './logo1.png';
 
+
 function App() {
+
   return (
     <div className="app-container">
       {/* Logo Animasyonu */}
@@ -18,7 +20,7 @@ function App() {
 
 
       <div class="opening-text-container">
-        <h1 class="opening-text">YAKINDA AÇILIYORUZ</h1>
+        <h1 className="opening-text">YAKINDA AÇILIYORUZ</h1>
       </div>
 
       {/* İletişim ve Adres Bilgileri */}
