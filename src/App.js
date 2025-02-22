@@ -7,7 +7,7 @@ import logo from './logo1.png';
 function App() {
 
   return (
-    <div className="app-container">
+    <div className="app-container" name="viewport" content= "with=device-with , initial-scale = 1.0" >
       {/* Logo Animasyonu */}
       <motion.div
         className="logo"
@@ -20,7 +20,7 @@ function App() {
 
 
       <div class="opening-text-container">
-        <h1 className="opening-text">YAKINDA AÇILIYORUZ</h1>
+        <h1 className="opening-text">ÇOK YAKINDA HİZMETİNİZDEYİZ</h1>
       </div>
 
       {/* İletişim ve Adres Bilgileri */}
@@ -30,10 +30,12 @@ function App() {
         animate={{ opacity: 1, y: 0 }}  // Tam görünür ve yukarı
         transition={{ delay: 1.5, duration: 1.5 }}  // Gecikmeli ve uzun geçiş süresi
       >
+   
         <p>📍 <strong>Adres:</strong> Cevizli Mahallesi, Bağdat Caddesi No: 599-601A Maltepe/İstanbul</p>
         <p>📞 <strong>Telefon:</strong> (542) 316 4774</p>
         <p>📧 <strong>E-mail:</strong> hakancizmeci@hotmail.com</p>
         <p>👨‍🍳 <strong>Hakan ÇİZMECİOĞLU</strong></p>
+     
       </motion.div>
     </div>
   );

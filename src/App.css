@@ -6,7 +6,7 @@
   background-position: center;
   color: #ffffff;
   text-align: center;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,12 +14,14 @@
   font-family: 'Poppins', sans-serif;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 /* Logo Stili */
 .logo-img {
-  width: 400px;
-  height: auto;
+  width: 30%;
+  max-width: 1200px;
+  height: 35%;
   border-radius: 12px;
   box-shadow: 0px 10px 30px rgba(241, 239, 239, 0.6);
   position: absolute;
@@ -44,7 +46,9 @@
   opacity: 0;
   animation: fadeInUp 3s 1s forwards;
   z-index: 2;
-  width: 500px;
+  width: 40%;
+  height: 20%;
+  max-width: 1200px;
 }
 
 /* Logo Animasyonu */
@@ -113,12 +117,12 @@
   align-items: center;
   height: 100vh;
   position: relative;
-  width: 500vh;
+  width: 100%;
 }
 
 /* Yazı stili ve arka plaka */
 .opening-text {
-  font-size: 4rem;  /* Font büyütüldü */
+  font-size: 2rem;  /* Font büyütüldü */
   font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
@@ -135,6 +139,7 @@
   background: rgba(0, 0, 0, 0.6); /* Yazı arkasına koyu bir zemin eklendi */
   padding: 10px 20px; /* Plakaya biraz iç boşluk eklendi */
   border-radius: 15px; /* Plakaya yuvarlak köşeler eklendi */
+  width: 70%;
 }
 
 /* Plaka animasyonu */
@@ -153,22 +158,21 @@
   }
   
 }
-@media (min-width: 640px) {
+@media screen and (max-width: 768px) {
 
   .logo-img{
-    width: 50%;
+    width: 100%;
   }
 
-
-}
-
-
-
-@media (min-width: 1024px) {
-
-  .logo-img{
-    width: 20%;
+  .opening-text-container{
+    width: 120%;
   }
 
- 
+  .contact-info{
+    width: 150%;
+    bottom: 10%;
+    left: 1%;
+    max-width: 350px;
+    height: 25%;
+  }
 }
