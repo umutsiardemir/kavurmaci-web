@@ -74,7 +74,7 @@ function App() {
         }}>📞 <strong>Telefon:</strong> (542) 316 4774</p>
         <p align="left" onClick={handleMail} 
         onMouseLeave={() => setIsHoveredForEmail(false)} // Hover bittiğinde
-        onMouseEnter={() => setIsHoveredForEmail(true)} 
+        onMouseEnter={() => setIsHoveredForEmail(true)}
         style={{
           color: isHoveredForEmail ? '#e60000' : 'white', // Hover durumunda renk değişimi
           cursor: 'pointer', // Tıklanabilir
