@@ -38,9 +38,6 @@ function App() {
       {/* Logo Animasyonu */}
       <motion.div
         className="logo"
-        initial={{ scale: 0.8, opacity: 0 }}  // Başlangıçta daha küçük ve görünmez
-        animate={{ scale: 1, opacity: 1 }}  // Tam büyüklük ve görünürlük
-        transition={{ type: 'spring', stiffness: 100, damping: 25 }}  // Yumuşak geçiş
       >
         <img src={logo} alt="Kavurmacı Logo" className="logo-img" />
       </motion.div>
@@ -71,7 +68,7 @@ function App() {
           color: isHoveredForNumber ? '#e60000' : 'white', // Hover durumunda renk değişimi
           cursor: 'pointer', // Tıklanabilir
           transition: 'color 0.3s ease' // Geçiş efekti
-        }}>📞 <strong>Telefon:</strong> (542) 316 4774</p>
+        }}>📞 <strong>Telefon:</strong> (0542) 316 4774</p>
         <p align="left" onClick={handleMail} 
         onMouseLeave={() => setIsHoveredForEmail(false)} // Hover bittiğinde
         onMouseEnter={() => setIsHoveredForEmail(true)}
