@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
-import logo from './logo1.png';
+import logo from './_PNG arka plansız.png';
 
 
 function App() {
